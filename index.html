@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coupon Wheel</title>
+  <style>
+    /* CSS styling for the wheel */
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://indiaforensic.com/certifications/wp-content/uploads/gambling.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+    h1 {
+      text-align: center;
+    }
+
+    .wheel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .wheel {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background-image: url('\Picsart_22-11-27_18-31-56-670.jpg');
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .wheel::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      transform: translateY(-50%);
+    }
+
+    .wheel__arrow {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 30px);
+      font-size: 24px;
+      color: #fff;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #spinBtn {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #138D75;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .coupon-image {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coupon Wheel</h1>
+  <div class="wheel-container">
+    <div class="wheel">
+      <img class="coupon-image" src="\coupon image.webp" alt="Coupon Image">
+    </div>
+    <i class="wheel__arrow fas fa-arrow-right"></i>
+  </div>
+  <button id="spinBtn">Spin</button>
+  <div class="result">
+    <p>Best of luck!</p>
+  </div>
+  
+  <script src="script.js"></script>
+  <script src="style.css"></script>
+</body>
+</html>
